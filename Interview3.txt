@@ -1,0 +1,6 @@
+1 For a book on a large bookshelf If I know author last name I will scan for that  by alphabetical order, if I dont, I will scan left to right looking for the title from top left corner to top right corner then right to left in a zig zag pattern
+2 I don't like much about screen keyboards, maybe the fact that they come and go as needed
+3 Im not sure what you're asking
+4 Size, color, text font.
+5 Alphabetically by author name then by book name or in sequential order by author.
+6 If i am at like a bookstore or library I will scan for 2-3 books max at a time,
