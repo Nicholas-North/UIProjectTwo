@@ -1,0 +1,17 @@
+Q: Walk me through how you find a book on a big bookshelf. 
+A: If I'm looking for a specific book on a big bookshelf, I would first look for the section based off the genre of the book and then the author's last name. This is more or less how I expect bookshelves to be organized in a library of bookstore, so I would start my search with those expectations. 
+===============================================================
+Q: What do you like about screen keyboards?
+A: I've only used a screen keyboard on my phone. It's convenient at times with relevant word suggestions. It's also nice to have shortcut access for symbols you wouldn't have on a normal keyboard.
+===============================================================
+Q: What keywords or attributes do you wish to see when looking for a books information?
+A: The attributes I'm looking for when looking for a book are genre, author, and title. 
+===============================================================
+Q: What visual elements help you find a book on a shelf?
+A: The main visual element that helps me find a book is the text on the spine. If a graphic for the specific book is more compelling, it's usually easier to find. Whether that be bright colors or a larger text size.
+===============================================================
+Q: What method of organization do you prefer for books?
+A: The organization method I prefer is by author's last name. For larger bookstores or libraries it's also helpful to separate things by genre.
+===============================================================
+Q: How many books do you usually look for at a time?
+A: This question depends on what your main purpose is in searching for a book, but I'd say usually one at a time.
