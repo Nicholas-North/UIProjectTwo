@@ -1,7 +1,7 @@
 <script>
     import { getContext } from 'svelte';
 
-    import NavBar from "../lib/NavBar.svelte";
+    import NavBar from '../lib/NavBar.svelte';
     import Carousel from '../lib/Carousel.svelte';
     import BubbleArray from '../lib/BubbleArray.svelte';
 
