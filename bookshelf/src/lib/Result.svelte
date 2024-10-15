@@ -4,7 +4,6 @@
   import NavBar from "../lib/NavBar.svelte";
 
   const setActiveModule = getContext('setActiveModule');
-  const setFilteredBooks = getContext('setFilteredBooks');
 
   const links = [
       { name: 'home', label: 'Home' },
@@ -14,14 +13,15 @@
 
   // Declare variables
   export let books = [];
+  export let filteredBooks = [];
 
 </script>
 
 <main>
   <NavBar links={links}/>
   <h1>Results</h1>
-    <div class="book-list-S">
-        {#each books as book}
+    <div>
+        {#each filteredBooks as book}
             <div class="book-item">
                 <img src={book.cover} alt={book.title} class="book-cover"/>
                 <div class="book-details">
