@@ -12,7 +12,6 @@
   ];
 
   // Declare variables
-  export let books = [];
   export let filteredBooks = [];
 
 </script>
@@ -27,7 +26,7 @@
                 <div class="book-details">
                     <h2>{book.title}</h2>
                     <p>Author: {book.author}</p>
-                    <p>Page Count: {book.pageCount}</p>
+                    <p>Page Count: {book.pages}</p>
                     <p>Rating: {book.rating}</p>
                 </div>
             </div>

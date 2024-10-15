@@ -17,10 +17,10 @@
 
   let filteredBooks = [];
 
-function Searching() 
+function Searching(books) 
   {
-    let input = document.getElementById('mySearch');
-    let filter = input.outerHTML.toUpperCase();
+    let input = document.getElementById('mySearch').value;
+    let filter = input.toUpperCase();
     for (let i = 0; i < books.length; i++){
       if (books[i].title.toUpperCase().indexOf(filter) > -1) {
         filteredBooks.push(books[i]);
@@ -35,5 +35,5 @@ function Searching()
   <NavBar links={links}/>
   <h1>Results</h1>
     <input type="text" id="mySearch" placeholder="Search.." title="Type in a category">
-    <button class="genre-button" id="SearchBtn" on:click={() => setActiveModule('Result')}>Submit</button>
+    <button class="genre-button" id="SearchBtn" on:click={() => Searching(books)}>Submit</button>
 </main>

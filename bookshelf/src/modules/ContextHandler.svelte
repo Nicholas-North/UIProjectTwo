@@ -19,8 +19,8 @@
     function setFilteredGenre(genre) {
         filteredGenre = genre;
     }
-    function setFilteredBooks(books) {
-        filteredBooks = books;
+    function setFilteredBooks(book) {
+        filteredBooks = book;
     }
     setContext('setActiveModule', setActiveModule);
     setContext('setFilteredGenre', setFilteredGenre);
@@ -34,8 +34,8 @@
     {#if activeModule === 'search'}
         <Search books={books}/>
     {/if}
-    {#if activeModule === 'sResult'}
-        <Result books={books}/>
+    {#if activeModule === 'Result'}
+        <Result filteredBooks={filteredBooks}/>
     {/if}
     {#if activeModule === 'browse'}
         <Browse books={books} />
