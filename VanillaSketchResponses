@@ -1,0 +1,36 @@
+I had to some sketches for my UI class regarding building a UI for a "Smart Bookshelf", and wanted to see if I could show you the vanilla first draft for four of the main splash screens of the application, and get your feedback? If so, if you could fill out the following questions, that'd be fantastic.
+- The UI on the right of each sketch represents the tablet that the user will be using to interact with the interface. Do you think the current sketches allow for and are catored towards a tablet/touch screen interface?
+- The main purpose of this Smart Bookshelf is to be able to see visual representations of where the books are located on a bookshelf in accordance to the dewey decimal system, through highlighted books on a virtual image of a shelf. With this goal in mind, do you think these four main screens encompass a suitable solution to that problem?
+- Do you think that the naming system of the labels and buttons are clear and intuitive?
+- If you think something is missing, or needs to be expanded upon; what would it be?
+- Enter any other observations you had here:
+=============================================
+Response #1:
+Q: Do you think the current sketches allow for and are catered towards a tablet/touch screen interface?
+A: Yes, I think so. It has a similar layout to other websites/apps that I know work well on a touch screen.
+
+Q: The main purpose of this Smart Bookshelf is to be able to see visual representations of where the books are located on a bookshelf in accordance to the Dewey decimal system, through highlighted books on a virtual image of a shelf. With this goal in mind, do you think these four main screens encompass a suitable solution to that problem?
+A: So this would be used for a library or something that is already organized by Dewey decimal, and then this helps you find the book on the physical shelf? If that's the case then yes, it'd be helpful to have a visual aid of where to find the book.
+
+Q: Do you think that the naming system of the labels and buttons are clear and intuitive?
+A: Yes, big clear buttons are great.
+One minor thing - the very top of the search and browse pages both have links to each other and the home screen. The catalog screen doesn't have any of that on the top. I see it has a home button at the bottom, but that's with a different label and in a different location than the other screen's home buttons. It might be more intuitive if that was consistent across screens.
+
+Q: If you think something is missing, or needs to be expanded upon; what would it be?
+A: Another small nitpicky thing: I don't see anything on the screens that directly relates to the Dewey decimal system.  I'm not sure if that would be useful, but I feel like it would be if the end goal is to look through a physical shelf organized by Dewey decimal number? I assume the book's number would be in the book detail list, or maybe as one of the pieces of info listed next to the book in the search results. So maybe you've already thought of that but it's not in the rough sketches.
+=============================================
+Response #2:
+Q: Do you think the current sketches allow for and are catered towards a tablet/touch screen interface?
+A: no yeah I think the current interface lends itself well to a tablet interface. touch targets are reasonably big, controls boil down to buttons, carousel, dropdown, etc. to be on a phone you could literally just scrap the bookshelf component and just do the right sidebar as the whole vertical screen.
+
+Q: The main purpose of this Smart Bookshelf is to be able to see visual representations of where the books are located on a bookshelf in accordance to the Dewey decimal system, through highlighted books on a virtual image of a shelf. With this goal in mind, do you think these four main screens encompass a suitable solution to that problem?
+A: yeah, as long as you can select "a" book from any of the 3 subscreens and have the shelf light up at the correct spot, that works. could also have browse/search light up all applicable spots for the search terms: "horror" lights up the horror section, etc
+
+Q: Do you think that the naming system of the labels and buttons are clear and intuitive?
+A: search and browse aren't that intuitive to separate imo, you could combine them and make the app less confusing w/ no loss of function. maybe move browse's popular books carousel to home and its genres filter to search?
+
+Q: If you think something is missing, or needs to be expanded upon; what would it be?
+A: maybe have book descriptions, reviews, checkout information for each book in the search/browse screen? otherwise i wouldn't really add anything
+
+Q: Enter any other observations you had here:
+A: there's no need for the catalog being its own deal imo. just have one search interface, then you can click on a book in the results list for its metadata/catalog entry. idk i'm not a book scientist but maybe the default search could just show the catalog, then it narrows down as you apply filters/lookup terms?
