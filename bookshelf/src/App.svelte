@@ -1,5 +1,6 @@
 <script>
-    // Declare variables
+  import ContextHandler from "./modules/ContextHandler.svelte";
+
   let data = [
     { title: "Book 1", author: "Author 1", cover: "src/assets/A Tale of Two Cities.jpg", shelf: "Shelf A", genre: "Historical Fiction", rating: 4, isbn: "1234567890", pages: 300 },
     { title: "Book 2", author: "Author 2", cover: "src/assets/Frankenstein.jpg", shelf: "Shelf B", genre: "Horror", rating: 3, isbn: "0987654321", pages: 200 },
@@ -12,26 +13,6 @@
     { title: "Book 9", author: "Author 9", cover: "src/assets/The Wise Man's Fear.jpg", shelf: "Shelf I", genre: "Fantasy", rating: 2, isbn: "7914680235", pages: 900 },
     { title: "Book 10", author: "Author 10", cover: "src/assets/War and Peace.jpg", shelf: "Shelf J", genre: "Historical Fiction", rating: 1, isbn: "8023579146", pages: 1000 }
   ];
-
-      export let genre = "";
-      export let books = data;
-
-      let filteredBooks = [];
-
-  document.getElementById("SearchBtn").addEventListener("click", Searching);
-
-  function Searching() 
-  {
-    document.getElementById("tester").innerHTML = "Day: ";
-
-    let input = document.getElementById('myInput');
-    let filter = input.outerHTML.toUpperCase();
-    for (let i = 0; i < books.length; i++){
-      if (books[i].title.toUpperCase().indexOf(filter) > -1) {
-        filteredBooks.push(books[i]);
-      }
-    }
-  }
 </script>
 
 <main>
@@ -40,25 +21,28 @@
       <img src="Shelf.png" alt="bookshelfs" width="200" height="500">
     </div>
     <div class="SmallCol">
-      <h1>Books in {genre}</h1>
-      <input type="text" id="mySearch" placeholder="Search.." title="Type in a category">
-      <button id="SearchBtn">Submit</button>
-      <p id="tester"></p>
-        <div class="book-list-S">
-            {#each filteredBooks as book}
-                <div class="book-item">
-                    <img src={book.cover} alt={book.title} class="book-cover"/>
-                    <div class="book-details">
-                        <h2>{book.title}</h2>
-                        <p>Author: {book.author}</p>
-                        <p>Page Count: {book.pageCount}</p>
-                        <p>Rating: {book.rating}</p>
-                    </div>
-                </div>
-            {/each}
-        </div>
-      <p>UI goes here</p>
-      
+      <!-- <Browse books={data} /> -->
+      <ContextHandler books={data}/>
     </div>
   </div>
 </main>
+
+<style>
+  .row {
+    display: flex;
+    height: 100vh;
+  }
+
+  .BigCol {
+    flex: 2;
+    background-color: lightblue;
+  }
+
+  .SmallCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: lightgreen;
+  }
+</style>

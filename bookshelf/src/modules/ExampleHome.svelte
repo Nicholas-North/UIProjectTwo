@@ -8,4 +8,5 @@
 <main>
     <h1>Home</h1>
     <button on:click={() => setActiveModule('browse')}>Browse</button>
+    <button on:click={() => setActiveModule('search')}>Search</button>
 </main>

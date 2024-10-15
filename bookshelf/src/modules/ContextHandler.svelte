@@ -3,12 +3,14 @@
     import Browse from "./browse.svelte";
     import ExampleHome from "./ExampleHome.svelte";
     import GenreBrowse from './GenreBrowse.svelte';
-    import Search from "./Search.svelte";
+    import Search from "./search.svelte";
+    import Result from "../lib/Result.svelte";
 
     export let books = [];
 
     let activeModule = 'home';
     let filteredGenre = 'All';
+    let filteredBooks = [];
     $: console.log(`activeModule changed to: ${activeModule}`);
 
     function setActiveModule(module) {
@@ -17,8 +19,12 @@
     function setFilteredGenre(genre) {
         filteredGenre = genre;
     }
+    function setFilteredBooks(books) {
+        filteredBooks = books;
+    }
     setContext('setActiveModule', setActiveModule);
     setContext('setFilteredGenre', setFilteredGenre);
+    setContext('setFilteredBooks', setFilteredBooks);
 </script>
 
 <main>
@@ -26,7 +32,10 @@
         <ExampleHome />
     {/if}   
     {#if activeModule === 'search'}
-        <Search />
+        <Search books={books}/>
+    {/if}
+    {#if activeModule === 'sResult'}
+        <Result books={books}/>
     {/if}
     {#if activeModule === 'browse'}
         <Browse books={books} />
