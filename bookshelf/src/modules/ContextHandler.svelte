@@ -11,6 +11,7 @@
     let activeModule = 'home';
     let filteredGenre = 'All';
     let filteredBooks = [];
+
     $: console.log(`activeModule changed to: ${activeModule}`);
 
     function setActiveModule(module) {
@@ -22,9 +23,11 @@
     function setFilteredBooks(book) {
         filteredBooks = book;
     }
+  
     setContext('setActiveModule', setActiveModule);
     setContext('setFilteredGenre', setFilteredGenre);
     setContext('setFilteredBooks', setFilteredBooks);
+
 </script>
 
 <main>
