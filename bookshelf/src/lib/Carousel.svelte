@@ -48,7 +48,7 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: black;
+    color: #6C584C;
   }
 
   .book {
@@ -80,7 +80,7 @@
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: #f0ead2;
     opacity: 0;
     transition: opacity 0.3s;
   }
