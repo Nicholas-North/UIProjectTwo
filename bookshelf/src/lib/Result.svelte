@@ -22,7 +22,7 @@
     <div>
         {#each filteredBooks as book}
             <div class="book-item">
-                <img src={book.cover} alt={book.title} class="book-cover"/>
+                <img src={book.img} alt={book.title} class="book-cover"/>
                 <div class="book-details">
                     <h3>{book.title}</h3>
                     <p class="bigText">Author: {book.author}</p>

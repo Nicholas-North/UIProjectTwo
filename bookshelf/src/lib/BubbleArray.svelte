@@ -6,7 +6,7 @@
     const setFilteredGenre = getContext("setFilteredGenre");
   
     // Extract unique genres from the books array
-    let genres = [...new Set(books.map(book => book.genre))];
+    let genres = [...new Set(books.flatMap(book => book.genre.split(',').map(genre => genre.trim())))];
 
     function handleGenreClick(genre) {
         setFilteredGenre(genre);
