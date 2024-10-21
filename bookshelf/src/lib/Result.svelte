@@ -8,7 +8,9 @@
   const links = [
       { name: 'home', label: 'Home' },
       { name: 'search', label: 'Search' },
-      { name: 'catalog', label: 'Catalog' }
+      { name: 'browse', label: 'Browse' },
+      { name: 'catalog', label: 'Catalog' },
+      { name: 'cart', label: 'Cart' }
   ];
 
   // Declare variables
@@ -19,12 +21,12 @@
 <main>
   <NavBar links={links}/>
   <h1 class="head">&nbsp; Results</h1>
-    <div>
+    <div class="scroll">
         {#each filteredBooks as book}
             <div class="book-item">
                 <img src={book.img} alt={book.title} class="book-cover"/>
                 <div class="book-details">
-                    <h3>{book.title}</h3>
+                    <p>{book.title}</p>
                     <p class="bigText">Author: {book.author}</p>
                     <p class="bigText">Page Count: {book.pages}</p>
                     <p class="bigText">Rating: {book.rating}</p>
@@ -39,7 +41,7 @@
       display: flex;
       align-items: center;
       padding: 2px;
-      border: 1px solid #f0ead2;
+      border: 1px solid black;
       border-radius: 8px;
   }
   .book-cover {
@@ -54,7 +56,7 @@
       font-size: 22px;
   }
   .bigText{
-    font-size: 22px;
+    font-size: 20px;
   }
   .head{
     color: #6C584C;

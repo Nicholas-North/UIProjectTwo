@@ -24,7 +24,7 @@
 <style>
   .row {
     display: flex;
-    height: 110vh;
+    height: 100vh;
   }
 
   .BigCol {
@@ -38,5 +38,7 @@
     flex-direction: column;
     position: relative;
     background-color: #F0EAD2;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 </style>

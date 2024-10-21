@@ -15,8 +15,9 @@
     const links = [
         { name: 'home', label: 'Home' },
         { name: 'search', label: 'Search' },
+        { name: 'browse', label: 'Browse' },
         { name: 'catalog', label: 'Catalog' },
-        { name: 'cart', label: 'Cart' },
+        { name: 'cart', label: 'Cart' }
     ];
 
     function addBook(book) {
@@ -77,14 +78,16 @@
         border-radius: 8px; /* Rounded corners */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         color: black; /* Text color */
+        font-size: 20px;
     }
     .buttons {
-        margin-top: 20px;
+        margin-top: 10px;
         display: flex;
         justify-content: center;
     }
     .buttons button {
         margin: 5px;
         padding: 10px 20px;
+        font-size: 20px;
     }
 </style>

@@ -11,7 +11,9 @@
     const links = [
         { name: 'home', label: 'Home' },
         { name: 'search', label: 'Search' },
-        { name: 'catalog', label: 'Catalog' }
+        { name: 'browse', label: 'Browse' },
+        { name: 'catalog', label: 'Catalog' },
+        { name: 'cart', label: 'Cart' }
     ];
 
 </script>

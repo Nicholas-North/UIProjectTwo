@@ -9,7 +9,9 @@
   const links = [
       { name: 'home', label: 'Home' },
       { name: 'search', label: 'Search' },
-      { name: 'catalog', label: 'Catalog' }
+      { name: 'browse', label: 'Browse' },
+      { name: 'catalog', label: 'Catalog' },
+      { name: 'cart', label: 'Cart' }
   ];
 
   // Declare variables
@@ -53,7 +55,7 @@ function Searching(books)
   .submit-button{
     background-color: gray;
     color: #f0ead2;
-    margin-left: 400px;
+    margin-left: 385px;
     margin-top: 5px;
     font-size: 22px;
     padding: 7px;
