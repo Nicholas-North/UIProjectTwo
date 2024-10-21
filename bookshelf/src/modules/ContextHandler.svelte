@@ -3,14 +3,20 @@
     import Browse from "./browse.svelte";
     import ExampleHome from "./ExampleHome.svelte";
     import GenreBrowse from './GenreBrowse.svelte';
-    import Search from "./search.svelte";
+    import Search from "./Search.svelte";
     import Result from "../lib/Result.svelte";
+    import Book from './Book.svelte';
+    import Cart from './Cart.svelte';
 
     export let books = [];
 
-    let activeModule = 'home';
+    // let activeModule = 'home';
+    let activeModule = 'cart';
     let filteredGenre = 'All';
     let filteredBooks = [];
+    let selectedBook = books[0];
+    let booksInCart = [];
+    console.log(booksInCart);
 
     $: console.log(`activeModule changed to: ${activeModule}`);
 
@@ -23,10 +29,22 @@
     function setFilteredBooks(book) {
         filteredBooks = book;
     }
+    function setSelectedBook(book) {
+        selectedBook = book;
+    }
+    function addBookToCart(book) {
+        booksInCart.push(book);
+    }
+    function removeBookFromCart(book) {
+        booksInCart = booksInCart.filter(b => b !== book);
+    }
   
     setContext('setActiveModule', setActiveModule);
     setContext('setFilteredGenre', setFilteredGenre);
     setContext('setFilteredBooks', setFilteredBooks);
+    setContext('setSelectedBook', setSelectedBook);
+    setContext('addBookToCart', addBookToCart);
+    setContext('removeBookFromCart', removeBookFromCart);
 
 </script>
 
@@ -45,5 +63,11 @@
     {/if}
     {#if activeModule === 'genre'}
         <GenreBrowse genre={filteredGenre} books={books} />
-    {/if}   
+    {/if}
+    {#if activeModule === 'book'}
+        <Book book={selectedBook} />
+    {/if}
+    {#if activeModule === 'cart'}
+        <Cart cartBooks={booksInCart} />
+    {/if}  
 </main>
