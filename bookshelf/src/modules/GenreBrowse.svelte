@@ -39,9 +39,9 @@
             <div class="book-item">
                 <img src={book.img} alt={book.title} class="book-cover" on:click={() => handleBookClick(book)}/>
                 <div class="book-details">
-                    <p>{book.title}</p>
+                    <p on:click={() => handleBookClick(book)}>{book.title}</p>
                     <p class="bigText">Author: {book.author}</p>
-                    <p class="bigText">Page Count: {book.pageCount}</p>
+                    <p class="bigText">Page Count: {book.pages}</p>
                     <p class="bigText">Rating: {book.rating}</p>
                 </div>
             </div>

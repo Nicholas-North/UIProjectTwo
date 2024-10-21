@@ -6,11 +6,11 @@
     import BubbleArray from '../lib/BubbleArray.svelte';
 
     export let book = {};
+    export let isAdded = false;
 
     const setActiveModule = getContext('setActiveModule');
     const addBookToCart = getContext('addBookToCart');
-
-    let isAdded = false;
+    const removeBookFromCart = getContext('removeBookFromCart');
 
     const links = [
         { name: 'home', label: 'Home' },
@@ -23,6 +23,10 @@
     function addBook(book) {
         addBookToCart(book);
         isAdded = true;
+    }
+    function removeBook(book) {
+        removeBookFromCart(book);
+        isAdded = false;
     }
 </script>
 
@@ -44,7 +48,11 @@
     </div>
     <div class="buttons">
         <button on:click={() => setActiveModule('find')}>Find Now</button>
-        <button on:click={() => addBook(book)}>Add to Cart</button>
+        {#if isAdded === false}
+            <button on:click={() => addBook(book)}>Add to Cart</button>
+        {:else}
+            <button on:click={() => removeBook(book)}>Remove from Cart</button>
+        {/if}
     </div>
 </main>
 
