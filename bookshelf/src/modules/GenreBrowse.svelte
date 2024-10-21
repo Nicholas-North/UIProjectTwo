@@ -12,7 +12,9 @@
     const links = [
         { name: 'home', label: 'Home' },
         { name: 'search', label: 'Search' },
-        { name: 'catalog', label: 'Catalog' }
+        { name: 'browse', label: 'Browse' },
+        { name: 'catalog', label: 'Catalog' },
+        { name: 'cart', label: 'Cart' }
     ];
 
     let filteredBooks = [];
@@ -31,14 +33,13 @@
 
 <main>
     <NavBar {links}/>
-    <button on:click={() => handleBack()}>&nbsp;Browse</button>
     <h1 class="head">Books in {genre}</h1>
     <div class="book-list">
         {#each filteredBooks as book}
             <div class="book-item">
                 <img src={book.img} alt={book.title} class="book-cover" on:click={() => handleBookClick(book)}/>
                 <div class="book-details">
-                    <h2>{book.title}</h2>
+                    <p>{book.title}</p>
                     <p class="bigText">Author: {book.author}</p>
                     <p class="bigText">Page Count: {book.pageCount}</p>
                     <p class="bigText">Rating: {book.rating}</p>
@@ -53,7 +54,7 @@
         display: flex;
         align-items: center;
         padding: 2px;
-        border: 1px solid #f0ead2;
+        border: 1px solid black;
         border-radius: 8px;
     }
     .book-cover {
@@ -68,7 +69,7 @@
         font-size: 22px;
     }
     .bigText{
-        font-size: 22px;
+        font-size: 20px;
     }
     .head{
         margin-left: 10px;

@@ -24,15 +24,6 @@
     currentIndex = (currentIndex + 1) % sortedBooks.length;
   }
 </script>
-
-  function prevBook() {
-    currentIndex = (currentIndex - 1 + sortedBooks.length) % sortedBooks.length;
-  }
-
-  function nextBook() {
-    currentIndex = (currentIndex + 1) % sortedBooks.length;
-  }
-</script>
   
 <div class="carousel">
   <button on:click={prevBook} class="arrow left">&lt;</button>

@@ -34,6 +34,7 @@
     const links = [
         { name: 'home', label: 'Home' },
         { name: 'search', label: 'Search' },
+        { name: 'browse', label: 'Browse' },
         { name: 'catalog', label: 'Catalog' },
         { name: 'cart', label: 'Cart' }
     ];
@@ -91,10 +92,13 @@
       width: 50px;
       height: auto;
       margin-right: 10px;
+      color: #6C584C;
     }
   
     .book-details {
       flex-grow: 1;
+      color: #6C584C;
+      font-size: 20px;
     }
   
     .buttons {
