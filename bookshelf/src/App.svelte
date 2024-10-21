@@ -24,12 +24,12 @@
 <style>
   .row {
     display: flex;
-    height: 100vh;
+    height: 110vh;
   }
 
   .BigCol {
     flex: 2;
-    background-color: lightblue;
+    background-color: #DDE5B6;
   }
 
   .SmallCol {
@@ -37,6 +37,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: lightgreen;
+    background-color: #F0EAD2;
   }
 </style>

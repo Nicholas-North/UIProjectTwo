@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #DDE5B6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,27 +15,21 @@
 /*Where the real object will display*/
 .BigCol {
   float: left;
-  color: red;
+  color: #f0ead2;
   width: 60%;
+  height: 100%;
 }
 /*Where the UI pages will display */
 .SmallCol {
   float: left;
   color: white;
-  width: 39%
+  width: 40%;
 }
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
-/* Style the search box */
-#mySearch {
-  width: 100%;
-  font-size: 18px;
-  padding: 11px;
-  border: 1px solid #ddd;
 }
 #myUL {
   /* Remove default list styling */

@@ -18,8 +18,14 @@
 
 <main>
     <NavBar links={links}/>
-    <h2>Trending</h2>
+    <h2 class="text">&nbsp;Trending</h2>
     <Carousel books={books} />
-    <h2>Genres</h2>
+    <h2 class="text">&nbsp;Genres</h2>
     <BubbleArray books={books} />
 </main>
+
+<style>
+    .text {
+        color: #6C584C;
+    }
+</style>

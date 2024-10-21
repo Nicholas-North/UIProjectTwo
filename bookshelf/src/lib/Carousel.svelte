@@ -59,6 +59,7 @@
     border: none;
     padding: 10px;
     cursor: pointer;
+    color: #6C584C;
   }
 
   .arrow.left {
@@ -86,7 +87,7 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: #f0ead2;
     padding: 10px;
     z-index: 5; /* Ensure overlay is below the buttons */
     max-height: 50%; /* Ensure overlay does not cover the entire book */

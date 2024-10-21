@@ -18,16 +18,16 @@
 
 <main>
   <NavBar links={links}/>
-  <h1>Results</h1>
+  <h1 class="head">&nbsp; Results</h1>
     <div>
         {#each filteredBooks as book}
             <div class="book-item">
                 <img src={book.img} alt={book.title} class="book-cover"/>
                 <div class="book-details">
-                    <h2>{book.title}</h2>
-                    <p>Author: {book.author}</p>
-                    <p>Page Count: {book.pages}</p>
-                    <p>Rating: {book.rating}</p>
+                    <h3>{book.title}</h3>
+                    <p class="bigText">Author: {book.author}</p>
+                    <p class="bigText">Page Count: {book.pages}</p>
+                    <p class="bigText">Rating: {book.rating}</p>
                 </div>
             </div>
         {/each}
@@ -38,17 +38,26 @@
   .book-item {
       display: flex;
       align-items: center;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border: 1px solid #ccc;
+      padding: 2px;
+      border: 1px solid #f0ead2;
       border-radius: 8px;
   }
   .book-cover {
-      width: 128px;
-      height: 192px;
+      width: 143px;
+      height: 215px;
+      margin-left: 10px;
       margin-right: 1rem;
   }
   .book-details {
       flex: 1;
+      color: #6C584C;
+      font-size: 22px;
+  }
+  .bigText{
+    font-size: 22px;
+  }
+  .head{
+    color: #6C584C;
+    font-size: 30px;
   }
 </style>
