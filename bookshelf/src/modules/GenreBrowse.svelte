@@ -8,6 +8,7 @@
 
     const setActiveModule = getContext('setActiveModule');
     const setFilteredGenre = getContext('setFilteredGenre');
+    const setSelectedBook = getContext('setSelectedBook');
     const links = [
         { name: 'home', label: 'Home' },
         { name: 'search', label: 'Search' },
@@ -22,6 +23,10 @@
         setFilteredGenre('All');
         setActiveModule('browse');
     }
+    function handleBookClick(book) {
+        setSelectedBook(book);
+        setActiveModule('book');
+    }
 </script>
 
 <main>
@@ -31,11 +36,11 @@
     <div class="book-list">
         {#each filteredBooks as book}
             <div class="book-item">
-                <img src={book.cover} alt={book.title} class="book-cover"/>
+                <img src={book.img} alt={book.title} class="book-cover" on:click={() => handleBookClick(book)}/>
                 <div class="book-details">
-                    <h2>{book.title}</h2>
+                    <h2 >{book.title}</h2>
                     <p>Author: {book.author}</p>
-                    <p>Page Count: {book.pageCount}</p>
+                    <p>Page Count: {book.pages}</p>
                     <p>Rating: {book.rating}</p>
                 </div>
             </div>
