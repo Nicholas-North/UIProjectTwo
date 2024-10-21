@@ -1,46 +1,58 @@
 <script>
   export let books = [];
+  let shelf = 0;
+  let numShelves = 7;
   
   // Sort books by popularity and limit to top 9
   let sortedBooks = books.sort((a, b) => b.popularity - a.popularity).slice(0, 9);
   let currentIndex = 0;
 
-  function prevBook() {
-    currentIndex = (currentIndex - 1 + sortedBooks.length) % sortedBooks.length;
+  function prevShelf() {
+    shelf = shelf - 1
+    //currentIndex = (currentIndex - 1 + sortedBooks.length) % sortedBooks.length;
   }
 
-  function nextBook() {
+  function nextShelf() {
     currentIndex = (currentIndex + 1) % sortedBooks.length;
   }
 </script>
 
-<div class="carousel">
-  <button on:click={prevBook} class="arrow left">&lt;</button>
-  <div class="book">
-    <div class="book-info">
-      <img src={sortedBooks[currentIndex].cover} alt={sortedBooks[currentIndex].title} />
-      <div class="overlay">
-        <h2>{sortedBooks[currentIndex].title}</h2>
-        <p>{sortedBooks[currentIndex].author}</p>
-        <p>{sortedBooks[currentIndex].genre}</p>
-      </div>
+<div class="library">
+  <button on:click={prevShelf} class="arrow left">&lt;</button>
+  <div class="bookshelf">
+    <div class="shelf">
+      test
+    </div>
+    <div class="shelf" style="background-color:black;">
+      test 2
     </div>
   </div>
-  <button on:click={nextBook} class="arrow right">&gt;</button>
+  <button on:click={nextShelf} class="arrow right">&gt;</button>
 </div>
 
 <style>
-  .carousel {
+  .library {
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
+      position: absolute;
       /* left: 50%; */
       /* top: 50%; */
       /* transform: translate(-50%, -50%); */
-      background-color: white;
       padding: 1rem;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      left:4.3%;
+      top:6.9%;
+      width:57%;
+      height:87%;
+  }
+
+  .bookshelf{
+    width:94%;
+    height:22%;
+    background-color: white;
+    position:absolute;
+    top:1%;
   }
 
   .arrow {
@@ -87,5 +99,15 @@
 
   .book-info:hover .overlay {
       opacity: 1;
+  }
+
+  .left{
+    left:0;
+    position: absolute;
+  }
+
+  .right{
+    position: absolute;
+    right:0;
   }
 </style>

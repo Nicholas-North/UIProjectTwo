@@ -5,6 +5,8 @@
     import GenreBrowse from './GenreBrowse.svelte';
     import Search from "./search.svelte";
     import Result from "../lib/Result.svelte";
+    import Splash from '../lib/Splash.svelte';
+    import Inventory from '../lib/Inventory.svelte';
 
     export let books = [];
 
@@ -32,7 +34,7 @@
 
 <main>
     {#if activeModule === 'home'}
-        <ExampleHome />
+        <Splash />
     {/if}   
     {#if activeModule === 'search'}
         <Search books={books}/>
@@ -46,4 +48,7 @@
     {#if activeModule === 'genre'}
         <GenreBrowse genre={filteredGenre} books={books} />
     {/if}   
+    {#if activeModule === 'catalog'}
+        <Inventory />
+    {/if}
 </main>
