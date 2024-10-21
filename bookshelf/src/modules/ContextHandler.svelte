@@ -1,7 +1,7 @@
 <script>
     import { setContext } from 'svelte';
     import Browse from "./browse.svelte";
-    import ExampleHome from "./ExampleHome.svelte";
+    import ExampleHome from './ExampleHome.svelte';
     import GenreBrowse from './GenreBrowse.svelte';
     import Search from "./Search.svelte";
     import Result from "../lib/Result.svelte";

@@ -16,6 +16,14 @@
   // Sort books by popularity and limit to top 15
   let sortedBooks = books.sort((a, b) => b.rating - a.rating).slice(0, 15);
   let currentIndex = 0;
+  function prevBook() {
+    currentIndex = (currentIndex - 1 + sortedBooks.length) % sortedBooks.length;
+  }
+
+  function nextBook() {
+    currentIndex = (currentIndex + 1) % sortedBooks.length;
+  }
+</script>
 
   function prevBook() {
     currentIndex = (currentIndex - 1 + sortedBooks.length) % sortedBooks.length;
@@ -40,7 +48,7 @@
   </div>
   <button on:click={nextBook} class="arrow right">&gt;</button>
 </div>
-  
+
 <style>
   .arrow {
     position: absolute;
