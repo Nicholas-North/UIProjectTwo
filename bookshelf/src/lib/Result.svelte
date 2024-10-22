@@ -4,6 +4,8 @@
   import NavBar from "../lib/NavBar.svelte";
 
   const setActiveModule = getContext('setActiveModule');
+  const setSelectedBook = getContext('setSelectedBook');
+  
 
   const links = [
       { name: 'home', label: 'Home' },
@@ -16,6 +18,10 @@
   // Declare variables
   export let filteredBooks = [];
 
+  function handleBookClick(book) {
+        setSelectedBook(book);
+        setActiveModule('book');
+  }
 </script>
 
 <main>
@@ -24,9 +30,9 @@
     <div class="scroll">
         {#each filteredBooks as book}
             <div class="book-item">
-                <img src={book.img} alt={book.title} class="book-cover"/>
+                <img src={book.img} alt={book.title} class="book-cover" on:click={() => handleBookClick(book)}/>
                 <div class="book-details">
-                    <p>{book.title}</p>
+                    <p on:click={() => handleBookClick(book)}>{book.title}</p>
                     <p class="bigText">Author: {book.author}</p>
                     <p class="bigText">Page Count: {book.pages}</p>
                     <p class="bigText">Rating: {book.rating}</p>

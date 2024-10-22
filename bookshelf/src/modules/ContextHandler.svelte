@@ -11,7 +11,7 @@
     export let books = [];
 
     // let activeModule = 'home';
-    let activeModule = 'cart';
+    let activeModule = 'home';
     let filteredGenre = 'All';
     let filteredBooks = [];
     let selectedBook = books[0];
@@ -37,6 +37,9 @@
     }
     function removeBookFromCart(book) {
         booksInCart = booksInCart.filter(b => b !== book);
+    }
+    function checkBookInCart(book) {
+        return booksInCart.includes(book);
     }
   
     setContext('setActiveModule', setActiveModule);
@@ -65,7 +68,7 @@
         <GenreBrowse genre={filteredGenre} books={books} />
     {/if}
     {#if activeModule === 'book'}
-        <Book book={selectedBook} />
+        <Book book={selectedBook} isAdded={checkBookInCart(selectedBook)} />
     {/if}
     {#if activeModule === 'cart'}
         <Cart cartBooks={booksInCart} />
