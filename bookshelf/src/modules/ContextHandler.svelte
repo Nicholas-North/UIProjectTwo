@@ -1,5 +1,6 @@
 <script>
     import { setContext } from 'svelte';
+    import { getContext } from 'svelte';
     import Browse from "./browse.svelte";
     import ExampleHome from './ExampleHome.svelte';
     import GenreBrowse from './GenreBrowse.svelte';
@@ -13,6 +14,10 @@
     import App from '../App.svelte';
     export let books = [];
 
+    console.log("contextdata: "+books);
+
+    const findBooks = getContext('findBooks');
+
     // let activeModule = 'home';
     let activeModule = 'home';
     let filteredGenre = 'All';
@@ -22,8 +27,12 @@
     console.log(booksInCart);
 
     $: console.log(`activeModule changed to: ${activeModule}`);
+    $: console.log(`selectedBook changed to: ${selectedBook}`);
 
     function setActiveModule(module) {
+        if(activeModule === 'find'){
+            findBooks([]);
+        }
         activeModule = module;
     }
     function getActiveModule() {
@@ -76,7 +85,7 @@
         <GenreBrowse genre={filteredGenre} books={books} />
     {/if}   
     {#if activeModule === 'catalog'}
-        <Inventory />
+        <Inventory books={books}/>
     {/if}
     {#if activeModule === 'book'}
         <Book book={selectedBook} isAdded={checkBookInCart(selectedBook)} />

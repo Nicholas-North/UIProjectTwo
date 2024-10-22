@@ -1,9 +1,9 @@
 <script>
   import { getContext } from 'svelte';
-  import books from '../assets/books.json';
     import App from '../App.svelte';
     import Book from '../modules/Book.svelte';
 
+    export let books = [];
 
   const checkSelectBook = getContext('checkSelectBook');
 
@@ -34,16 +34,12 @@
 
   function prevShelf() {
     shelf = shelf==0 ? numShelves-1 : shelf-1;
-    console.log(shelf);
-    console.log(shelfBooks);
     //currentIndex = (currentIndex - 1 + sortedBooks.length) % sortedBooks.length;
   }
 
   function nextShelf() {
     //currentIndex = (currentIndex + 1) % sortedBooks.length;
     shelf = Math.abs((shelf + 1) % numShelves);
-    console.log(shelf);
-    console.log(shelfBooks);
   }
 </script>
 
@@ -53,22 +49,22 @@
     <button on:click={prevShelf} class="arrow left">&lt;</button>
     <div class="bookshelf">
       <div class="shelf" style="margin-top:1%">
-        {#each shelf1 as book, i}
-            <div class='{checkSelectBook(book) ? "findbook" : 'book'}' style="height:{90+((book['pages']/100)%10)}%; width:{100/shelf1.length}%; background-color:{getColor()};"></div>
+        {#each shelf1 as book}
+          <div class='{checkSelectBook(book) ? "findbook" : 'book'}' style="height:{90+((book['pages']/100)%10)}%; width:{100/shelf1.length}%; background-color:{getColor()};"></div>
         {/each}
       </div>
       <div class="shelf">
-        {#each shelf2 as book, i}
+        {#each shelf2 as book}
           <div class='{checkSelectBook(book) ? "findbook" : 'book'}' style="height:{90+((book['pages']/100)%10)}%; width:{100/shelf2.length}%; background-color:{getColor()};"></div>
         {/each}
       </div>
       <div class="shelf">
-        {#each shelf3 as book, i}
+        {#each shelf3 as book}
           <div class='{checkSelectBook(book) ? "findbook" : 'book'}' style="height:{90+((book['pages']/100)%10)}%; width:{100/shelf3.length}%; background-color:{getColor()};"></div>
         {/each}
       </div>
       <div class="shelf">
-        {#each shelf4 as book, i}
+        {#each shelf4 as book}
           <div class='{checkSelectBook(book) ? "findbook" : 'book'}' style="height:{90+((book['pages']/100)%10)}%; width:{100/shelf4.length}%; background-color:{getColor()};"></div>
         {/each}
       </div>
@@ -89,7 +85,8 @@
   .findbook{
     text-align: center;
     position: relative;
-    border-style:solid yellow;
+    border-style:solid;
+    border-color:yellow;
     margin-top: auto;
   }
 

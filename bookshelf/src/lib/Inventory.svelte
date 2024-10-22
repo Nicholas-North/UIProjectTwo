@@ -1,7 +1,8 @@
 <script>
     import { getContext } from 'svelte';
-    import books from '../assets/books.json';
     import NavBar from '../lib/NavBar.svelte';
+
+    export let books = [];
 
     const setActiveModule = getContext('setActiveModule');
     const setSelectedBook = getContext('setSelectedBook');
@@ -33,7 +34,7 @@
         </tr>
         {#each currentBooks as book}
             <tr>
-                <td><a class="booktitle" on:click={() => {setSelectedBook(book); setActiveModule('book')}}>{book['title']}</a></td>
+                <td><a class="booktitle" on:click={() => {console.log(); setSelectedBook(book); setActiveModule('book')}}>{book['title']}</a></td>
                 <td>{book['author']}</td>
                 <td>{book['genre']}</td>
                 <td>{book['rating']}</td>

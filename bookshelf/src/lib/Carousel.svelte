@@ -8,6 +8,7 @@
   const setSelectedBook = getContext('setSelectedBook');
 
   function handleBookClick(book) {
+      console.log();
       setSelectedBook(book);
       setActiveModule('book');
   }
