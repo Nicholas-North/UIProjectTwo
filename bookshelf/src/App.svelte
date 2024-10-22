@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
   import ContextHandler from "./modules/ContextHandler.svelte";
   import { setContext } from 'svelte';
+  import data from './books.json';
 
 
   let findSelectBooks = [];
@@ -12,7 +13,13 @@
     findSelectBooks = books;
   }
   function checkSelectBook(book){
-    return findSelectBooks.includes(book);
+    if(findSelectBooks.includes(book)){
+      console.log('found')
+      console.log(book);
+      console.log(findSelectBooks);
+      return true;
+    }
+    return false;
   }
   function getSelectBooks() {
     return findSelectBooks;
@@ -22,11 +29,13 @@
   setContext('checkSelectBook', checkSelectBook);
   setContext('getSelectBooks', getSelectBooks);
 
-  let data = [];
+  /*let data = [];
   onMount(async () => {
         const response = await fetch('src/books.json');
         data = await response.json();
     });
+    */
+  console.log(data);
 </script>
 
 <main>
