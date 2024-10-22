@@ -86,7 +86,7 @@
     text-align: center;
     position: relative;
     border-style:solid;
-    border-color: yellow;
+    border-color:yellow;
     margin-top: auto;
   }
 
