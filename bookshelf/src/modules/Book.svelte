@@ -11,6 +11,7 @@
     const setActiveModule = getContext('setActiveModule');
     const addBookToCart = getContext('addBookToCart');
     const removeBookFromCart = getContext('removeBookFromCart');
+    const findBooks = getContext('findBooks');
 
     const links = [
         { name: 'home', label: 'Home' },
@@ -47,7 +48,7 @@
         <p>Description:<br>{book.desc}</p>
     </div>
     <div class="buttons">
-        <button on:click={() => setActiveModule('find')}>Find Now</button>
+        <button on:click={() => {findBooks(book); setActiveModule('find')}}>Find Now</button>
         {#if isAdded === false}
             <button on:click={() => addBook(book)}>Add to Cart</button>
         {:else}

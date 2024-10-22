@@ -4,14 +4,15 @@
     import NavBar from '../lib/NavBar.svelte';
 
     const setActiveModule = getContext('setActiveModule');
+    const setSelectedBook = getContext('setSelectedBook');
     const links = [
         { name: 'home', label: 'Home' },
         { name: 'search', label: 'Search' },
         { name: 'browse', label: 'Browse' },
         { name: 'catalog', label: 'Catalog' },
         { name: 'cart', label: 'Cart' }
-    ];
 
+    ];
     let pageCount = 0;        
     let titles = Object.keys(books);
     $: currentBooks = books.slice(50*pageCount,50*pageCount+50);
@@ -32,7 +33,7 @@
         </tr>
         {#each currentBooks as book}
             <tr>
-                <td><a class="booktitle" on:click={() => {setActiveModule('placeholder')}}>{book['title']}</a></td>
+                <td><a class="booktitle" on:click={() => {setSelectedBook(book); setActiveModule('book')}}>{book['title']}</a></td>
                 <td>{book['author']}</td>
                 <td>{book['genre']}</td>
                 <td>{book['rating']}</td>
