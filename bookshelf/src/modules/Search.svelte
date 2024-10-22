@@ -9,7 +9,9 @@
   const links = [
       { name: 'home', label: 'Home' },
       { name: 'search', label: 'Search' },
-      { name: 'catalog', label: 'Catalog' }
+      { name: 'browse', label: 'Browse' },
+      { name: 'catalog', label: 'Catalog' },
+      { name: 'cart', label: 'Cart' }
   ];
 
   // Declare variables
@@ -33,7 +35,30 @@ function Searching(books)
 
 <main>
   <NavBar links={links}/>
-  <h1>Results</h1>
+  <h1 class="text">&nbsp;Results</h1>
     <input type="text" id="mySearch" placeholder="Search.." title="Type in a category">
-    <button class="genre-button" id="SearchBtn" on:click={() => Searching(books)}>Submit</button>
+    <button class="submit-button" id="SearchBtn" on:click={() => Searching(books)}>Search</button>
 </main>
+
+<style>
+  .text {
+      color: #6C584C;
+      font-size: 30px;
+  }
+  #mySearch{
+    margin-left: 10px;
+    width: 90%;
+    font-size: 22px;
+    padding: 11px;
+    border: 1px solid #ddd;
+  }
+  .submit-button{
+    background-color: gray;
+    color: #f0ead2;
+    margin-left: 385px;
+    margin-top: 5px;
+    font-size: 22px;
+    padding: 7px;
+    border-radius: 10px;
+  }
+</style>
