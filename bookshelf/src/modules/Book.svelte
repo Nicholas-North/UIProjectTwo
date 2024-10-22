@@ -48,7 +48,7 @@
         <p>Description:<br>{book.desc}</p>
     </div>
     <div class="buttons">
-        <button on:click={() => {findBooks(book); setActiveModule('find')}}>Find Now</button>
+        <button on:click={() => {findBooks([book]); setActiveModule('find')}}>Find Now</button>
         {#if isAdded === false}
             <button on:click={() => addBook(book)}>Add to Cart</button>
         {:else}

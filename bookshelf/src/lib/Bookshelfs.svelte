@@ -54,7 +54,7 @@
     <div class="bookshelf">
       <div class="shelf" style="margin-top:1%">
         {#each shelf1 as book, i}
-            <div class='{checkSelectBook(book) ? "findbook" : 'book'}' style="height:{90+((book['pages']/100)%10)}%; width:{100/shelf1.length}%; background-color:{getColor()};"></div>
+          <div class='{checkSelectBook(book) ? "findbook" : 'book'}' style="height:{90+((book['pages']/100)%10)}%; width:{100/shelf1.length}%; background-color:{getColor()};"></div>
         {/each}
       </div>
       <div class="shelf">

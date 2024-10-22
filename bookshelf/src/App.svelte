@@ -9,10 +9,10 @@
   
 
   function findBooks(books){
-      findSelectBooks = books;
+    findSelectBooks = books;
   }
   function checkSelectBook(book){
-      return findSelectBooks.includes(book);
+    return findSelectBooks.includes(book);
   }
   function getSelectBooks() {
     return findSelectBooks;
