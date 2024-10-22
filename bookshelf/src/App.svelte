@@ -2,6 +2,25 @@
   import Bookshelfs from "./lib/Bookshelfs.svelte";
   import { onMount } from 'svelte';
   import ContextHandler from "./modules/ContextHandler.svelte";
+  import { setContext } from 'svelte';
+
+
+  let findSelectBooks = [];
+  
+
+  function findBooks(books){
+      findSelectBooks = books;
+  }
+  function checkSelectBook(book){
+      return findSelectBooks.includes(book);
+  }
+  function getSelectBooks() {
+    return findSelectBooks;
+  }
+
+  setContext('findBooks', findBooks);
+  setContext('checkSelectBook', checkSelectBook);
+  setContext('getSelectBooks', getSelectBooks);
 
   let data = [];
   onMount(async () => {
@@ -12,7 +31,7 @@
 
 <main>
   <div class="row">
-    <div class="BigCol">
+    <div class="BigCol">\
       <img src="src/assets/bookshelf.jpg" alt="bookshelfs" width=90% height=95% style="margin-top:2.5%; margin-left:5% ">
       <Bookshelfs books={data}/>
     </div>

@@ -6,6 +6,7 @@
     const addBookToCart = getContext('addBookToCart');
     const setActiveModule = getContext('setActiveModule');
     const setSelectedBook = getContext('setSelectedBook');
+    const findBooks = getContext('findBooks');
 
     export let cartBooks = [];
 
@@ -24,14 +25,17 @@
     }
 
     function searchSelectedBooks() {
-        const checkboxes = document.querySelectorAll('.book-checkbox');
+      const checkboxes = document.querySelectorAll('.book-checkbox');
         const selectedBooks = [];
         checkboxes.forEach((checkbox, index) => {
             if (checkbox.checked) {
-                selectedBooks.push(index);
+                selectedBooks.push(cartBooks[index]);
             }
         });
+
         console.log(selectedBooks);
+        findBooks(selectedBooks);
+        setActiveModule('find');
     }
 
     function addBooks() {

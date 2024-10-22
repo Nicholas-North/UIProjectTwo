@@ -9,7 +9,8 @@
     import Inventory from '../lib/Inventory.svelte';
     import Book from './Book.svelte';
     import Cart from './Cart.svelte';
-
+    import FindBook from '../lib/FindBook.svelte'
+    import App from '../App.svelte';
     export let books = [];
 
     // let activeModule = 'home';
@@ -24,6 +25,9 @@
 
     function setActiveModule(module) {
         activeModule = module;
+    }
+    function getActiveModule() {
+        return activeModule;
     }
     function setFilteredGenre(genre) {
         filteredGenre = genre;
@@ -43,8 +47,10 @@
     function checkBookInCart(book) {
         return booksInCart.includes(book);
     }
+    
   
     setContext('setActiveModule', setActiveModule);
+    setContext('getActiveModule', getActiveModule);
     setContext('setFilteredGenre', setFilteredGenre);
     setContext('setFilteredBooks', setFilteredBooks);
     setContext('setSelectedBook', setSelectedBook);
@@ -78,4 +84,7 @@
     {#if activeModule === 'cart'}
         <Cart cartBooks={booksInCart} />
     {/if}  
+    {#if activeModule === 'find'}
+        <FindBook />
+    {/if}
 </main>
