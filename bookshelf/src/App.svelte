@@ -1,4 +1,5 @@
 <script>
+  import Bookshelfs from "./lib/Bookshelfs.svelte";
   import { onMount } from 'svelte';
   import ContextHandler from "./modules/ContextHandler.svelte";
 
@@ -12,7 +13,8 @@
 <main>
   <div class="row">
     <div class="BigCol">
-      <img src="Shelf.png" alt="bookshelfs" width="200" height="500">
+      <img src="src/assets/bookshelf.jpg" alt="bookshelfs" width=90% height=95% style="margin-top:2.5%; margin-left:5% ">
+      <Bookshelfs books={data}/>
     </div>
     <div class="SmallCol">
       <!-- <Browse books={data} /> -->
