@@ -89,7 +89,8 @@
   .findbook{
     text-align: center;
     position: relative;
-    border-style:solid yellow;
+    border-style:solid;
+    border-color:yellow;
     margin-top: auto;
   }
 
