@@ -72,7 +72,6 @@
     {#if activeModule === 'catalog'}
         <Inventory />
     {/if}
-    {/if}
     {#if activeModule === 'book'}
         <Book book={selectedBook} isAdded={checkBookInCart(selectedBook)} />
     {/if}

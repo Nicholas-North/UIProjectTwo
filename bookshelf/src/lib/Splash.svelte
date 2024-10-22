@@ -8,9 +8,9 @@
 <main>
     <div class="home-container">
         <button class="home-select" id='browse' on:click={() => {setActiveModule('browse');}}><p>Browse</p></button>
-        <button class="home-select" id='catalog' on:click={() => {setActiveModule('catalog');}}><p>Catalog</p></button>
         <button class="home-select" id='search' on:click={() => {setActiveModule('search');}}><p>Search</p></button>
-        <button class="home-select" id='placeholder'><p>Placeholder</p></button>
+        <button class="home-select" id='catalog' on:click={() => {setActiveModule('catalog');}}><p>Catalog</p></button>
+        <button class="home-select" id='placeholder'><p></p></button>
     </div> 
 </main>
 
@@ -27,6 +27,8 @@
         flex:1;
         width:50%;
         height:49vh;
+        color:#f0ead2;
+        font-size: 30px;
     }
 
     .overlay{

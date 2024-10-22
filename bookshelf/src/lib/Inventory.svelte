@@ -7,8 +7,10 @@
     const links = [
         { name: 'home', label: 'Home' },
         { name: 'search', label: 'Search' },
-        { name: 'browse', label: 'Browse' }
-    ]
+        { name: 'browse', label: 'Browse' },
+        { name: 'catalog', label: 'Catalog' },
+        { name: 'cart', label: 'Cart' }
+    ];
 
     let pageCount = 0;        
     let titles = Object.keys(books);
@@ -19,7 +21,7 @@
 
 <div>
     <NavBar {links}/>
-    <table>
+    <table class="text">
         <tr>
             <th>Title</th>
             <th>Author</th>
@@ -47,5 +49,9 @@
     .booktitle:hover{
         color:blue;
         cursor: pointer;
+    }
+    .text{
+        color:#6C584C;
+        font-size: 20px;
     }
 </style>
