@@ -32,7 +32,7 @@
 <main>
   <div class="row">
     <div class="BigCol">\
-      <img src="src/assets/bookshelf.jpg" alt="bookshelfs" width=90% height=95% style="margin-top:2.5%; margin-left:5% ">
+      <img src="src/assets/bookshelf.jpg" alt="bookshelfs" width=90% height=92.5% style="margin-top:5%; margin-left:5% ">
       <Bookshelfs books={data}/>
     </div>
     <div class="SmallCol">

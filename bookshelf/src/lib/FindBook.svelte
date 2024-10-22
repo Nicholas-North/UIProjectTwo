@@ -28,6 +28,7 @@
     .displaybox {
         padding:0;
         text-align:center;
+        color:#6C584C;
     }
 
     .displaybox::backdrop{

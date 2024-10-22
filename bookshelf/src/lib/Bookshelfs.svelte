@@ -82,14 +82,14 @@
     color:black;
     position:absolute;
     left:31%;
-    top:1.4%;
+    top:.1%;
+    text-align:center;
   }
 
   .findbook{
     text-align: center;
     position: relative;
-    border-style:solid;
-    border-style:yellow;
+    border-style:solid yellow;
     margin-top: auto;
   }
 
@@ -116,9 +116,9 @@
 
   .shelf{
     width:100%;
-    height:22%;
+    height:21%;
     position:relative;
-    top:1%;
+    top:5%;
     margin-bottom: 2.8%;
     display:flex;
     text-align:center;
@@ -126,6 +126,8 @@
 
   .book{
     margin-top: auto;
+    text-align: center;
+    position: relative;
   }
 
   .arrow {
@@ -134,44 +136,6 @@
     font-size: 2rem;
     cursor: pointer;
     color: black;
-  }
-
-  .book {
-    text-align: center;
-    position: relative;
-  }
-
-  .book-info {
-    position: relative;
-  }
-
-  .book img {
-    max-width: 100px;
-    transition: opacity 0.3s;
-  }
-
-  .book img:hover {
-    opacity: 0.7;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .book-info:hover .overlay {
-      opacity: 1;
   }
 
   .left{
