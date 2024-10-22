@@ -17,10 +17,11 @@
     nav {
       position: relative;
       top: 0;
-      width: 100%;
-      background-color: #333;
-      color: white;
+      width: 93.9%;
+      background-color: #6C584C;
+      color: #f0ead2;
       padding: 1rem;
+      font-size: 22px;
     }
   
     ul {
@@ -36,12 +37,12 @@
     }
   
     a {
-      color: white;
+      color: #f0ead2;
       text-decoration: none;
       padding: 0.5rem 1rem;
     }
   
     a:hover {
-      background-color: #575757;
+      background-color: #352100;
     }
   </style>

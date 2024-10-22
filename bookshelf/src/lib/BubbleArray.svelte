@@ -6,7 +6,7 @@
     const setFilteredGenre = getContext("setFilteredGenre");
   
     // Extract unique genres from the books array
-    let genres = [...new Set(books.map(book => book.genre))];
+    let genres = [...new Set(books.flatMap(book => book.genre.split(',').map(genre => genre.trim())))];
 
     function handleGenreClick(genre) {
         setFilteredGenre(genre);
@@ -30,16 +30,17 @@
     }
   
     .genre-button {
-      background-color: #007BFF;
-      color: white;
+      background-color: #A98467;
+      color: #f0ead2;
       border: none;
       border-radius: 20px;
       padding: 10px 20px;
       cursor: pointer;
       transition: background-color 0.3s;
+      font-size: 22px;
     }
   
     .genre-button:hover {
-      background-color: #0056b3;
+      background-color: #6C584C;
     }
   </style>
