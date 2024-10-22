@@ -94,9 +94,15 @@
         display: flex;
         justify-content: center;
     }
+    .buttons button:hover{
+        background-color: #6C584C;
+    }
     .buttons button {
         margin: 5px;
         padding: 10px 20px;
-        font-size: 20px;
+        background-color: #A98467;
+        color: #f0ead2;
+        font-size: 22px;
+        transition: background-color 0.3s;
     }
 </style>

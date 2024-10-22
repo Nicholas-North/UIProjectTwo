@@ -10,8 +10,6 @@
         <button class="home-select" id='browse' on:click={() => {setActiveModule('browse');}} style="margin-top:15%;"><p>Browse</p></button>
         <button class="home-select" id='catalog' on:click={() => {setActiveModule('catalog');}}><p>Catalog</p></button>
         <button class="home-select" id='search' on:click={() => {setActiveModule('search');}}><p>Search</p></button>
-
-
     </div> 
 </main>
 
@@ -20,6 +18,7 @@
         width:100%;
         height:100%;
         display:block;
+        background-color:#f0ead2;
     }
 
     .home-select{
@@ -30,16 +29,11 @@
         width:80%;
         height:20vh;
         border-radius: 20px;
+        background-color: #A98467;
         color:#f0ead2;
-        font-size: 30px;
+        font-size: 35px;
     }
-
-    .overlay{
-        position:fixed;
-        display:none;
-        width:100%;
-        height:100%;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 2;
+    .home-select:hover {
+      background-color: #6C584C;
     }
 </style>
