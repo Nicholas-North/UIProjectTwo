@@ -11,8 +11,8 @@
         { name: 'browse', label: 'Browse' },
         { name: 'catalog', label: 'Catalog' },
         { name: 'cart', label: 'Cart' }
-    ]
 
+    ];
     let pageCount = 0;        
     let titles = Object.keys(books);
     $: currentBooks = books.slice(50*pageCount,50*pageCount+50);
@@ -22,7 +22,7 @@
 
 <div>
     <NavBar {links}/>
-    <table>
+    <table class="text">
         <tr>
             <th>Title</th>
             <th>Author</th>
@@ -50,5 +50,9 @@
     .booktitle:hover{
         color:blue;
         cursor: pointer;
+    }
+    .text{
+        color:#6C584C;
+        font-size: 20px;
     }
 </style>

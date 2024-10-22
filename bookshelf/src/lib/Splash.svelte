@@ -10,6 +10,8 @@
         <button class="home-select" id='browse' on:click={() => {setActiveModule('browse');}} style="margin-top:15%;"><p>Browse</p></button>
         <button class="home-select" id='catalog' on:click={() => {setActiveModule('catalog');}}><p>Catalog</p></button>
         <button class="home-select" id='search' on:click={() => {setActiveModule('search');}}><p>Search</p></button>
+
+
     </div> 
 </main>
 
@@ -28,6 +30,8 @@
         width:80%;
         height:20vh;
         border-radius: 20px;
+        color:#f0ead2;
+        font-size: 30px;
     }
 
     .overlay{
