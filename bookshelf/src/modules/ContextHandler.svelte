@@ -9,8 +9,8 @@
     import Inventory from '../lib/Inventory.svelte';
     import Book from './Book.svelte';
     import Cart from './Cart.svelte';
-    import FindBook from '../lib/FindBook.svelte';
-    
+    import FindBook from '../lib/FindBook.svelte'
+    import App from '../App.svelte';
     export let books = [];
 
     // let activeModule = 'home';
