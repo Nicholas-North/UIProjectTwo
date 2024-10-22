@@ -5,6 +5,8 @@
     import GenreBrowse from './GenreBrowse.svelte';
     import Search from "./Search.svelte";
     import Result from "../lib/Result.svelte";
+    import Splash from '../lib/Splash.svelte';
+    import Inventory from '../lib/Inventory.svelte';
     import Book from './Book.svelte';
     import Cart from './Cart.svelte';
 
@@ -53,7 +55,7 @@
 
 <main>
     {#if activeModule === 'home'}
-        <ExampleHome />
+        <Splash />
     {/if}   
     {#if activeModule === 'search'}
         <Search books={books}/>
@@ -66,6 +68,9 @@
     {/if}
     {#if activeModule === 'genre'}
         <GenreBrowse genre={filteredGenre} books={books} />
+    {/if}   
+    {#if activeModule === 'catalog'}
+        <Inventory />
     {/if}
     {#if activeModule === 'book'}
         <Book book={selectedBook} isAdded={checkBookInCart(selectedBook)} />

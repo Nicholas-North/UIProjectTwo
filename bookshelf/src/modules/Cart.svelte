@@ -78,13 +78,6 @@
 </main>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
   .cart-container {
     width: 100%;
     max-height: 700px; /* Increased height */
@@ -108,6 +101,8 @@
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    color:#6C584C;
+    font-size: 20px;
   }
 
   .book-checkbox {
